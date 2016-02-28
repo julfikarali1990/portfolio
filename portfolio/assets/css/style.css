@@ -357,13 +357,13 @@ ul.list-check li::before {
 	padding: 0 15px;
 }
 
-.intro h1{
-	font-size: 60px;
-	line-height: 80px;
+.intro h1, .intro h3{
+	font-size: 30px;
+	line-height: 40px;
 	margin-bottom: 16px;
 	color: #52b3d9;
 }
-.intro h1 span{
+.intro h1 span , .intro h3 span{
 	color: #68c3a3;
 }
 .intro p{

@@ -295,11 +295,12 @@ jQuery(function ($) {
     $('#contactForm').on('submit',function(e){
 
         e.preventDefault();
-
-        var $action = $(this).prop('action');
-        var $data = $(this).serialize();
+        //var $action = $(this).prop('action');
+        var $action = "sendemail.php";
+		var $data = $(this).serialize();
         var $this = $(this);
-
+		
+		
         $this.prevAll('.alert').remove();
 
         $.post( $action, $data, function( data ) {

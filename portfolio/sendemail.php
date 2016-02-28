@@ -1,18 +1,17 @@
 <?php
    
-
     session_cache_limiter( 'nocache' );
     header( 'Expires: ' . gmdate( 'r', 0 ) );
     header( 'Content-type: application/json' );
 
 
-    $to         = 'trendytheme.net@gmail.com';  // put your email here
+    $to         = 'ali.j@husky.neu.edu';  // put your email here
 
     $email_template = 'simple.html';
 
     $subject    = strip_tags($_POST['subject']);
     $email       = strip_tags($_POST['email']);
-    $phone      = strip_tags($_POST['phone']);
+    //$phone      = strip_tags($_POST['phone']);
     $name       = strip_tags($_POST['name']);
     $message    = nl2br( htmlspecialchars($_POST['message'], ENT_QUOTES) );
     $result     = array();
@@ -51,8 +50,7 @@
         '{{subject}}' => $subject,
         '{{email}}'=>$email,
         '{{message}}'=>$message,
-        '{{name}}'=>$name,
-        '{{phone}}'=>$phone
+        '{{name}}'=>$name
         );
 
 
